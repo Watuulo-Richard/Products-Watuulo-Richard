@@ -75,7 +75,8 @@ function displaySingleProduct(product){
         </div>
         <div class="recipe-ingredients">
             <div class="recipe-heading">
-                <p>OTHER PRODUCTS</p>
+                <p>OTHER PRODUCT IMAGES</p>
+                <p>${product.productDetails}</p>
             </div>
             <div class="recipe-grid-container">
                 <div class="image-container">
