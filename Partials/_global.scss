@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #F9D188, #F7AC85);
+    min-height: 100vh;
+    font-size: 1rem;
+    font-family: $font-family;
+    .main-container {
+        max-width: 1200px;
+        margin: 5rem auto;
+        background: $nav-bar-bg;
+        padding: 2rem;
+        border-radius: .5rem;
+    }
+}

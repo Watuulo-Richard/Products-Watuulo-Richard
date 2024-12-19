@@ -1,0 +1,129 @@
+.main-content {
+    min-height: 100vh;
+    display: flex;
+    // padding: 2rem;
+    .left {
+        width: 40%;
+        padding: 2rem 1rem;
+
+        .card-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            border-radius: .3rem;
+            text-decoration: none;
+            .card-image-container {
+                width: 60px;
+                height: 60px;
+                // border-radius: 50%;
+                overflow: hidden;
+                & img {
+                    width: 100%;
+                    display: block;
+                    // overflow: hidden;
+                    object-fit: cover;
+                }
+            }
+            .card-text {
+                & h3 {
+                    color: $bg-left-color;
+                }
+                & p {
+                    color: $custom-color;
+                }
+            }
+            &:hover {
+                background: #b3b0af3e;
+                // scale: 1.09;
+                transform: translateY(-5px);
+            }
+        }
+    }
+    .right {
+        background: #b3b0af3e;
+        width: 60%;
+        .product-detail-container {
+            width: 100%;
+            & img {
+                width: 100%;
+                display: block;
+            }
+        }
+        .main-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            .time {
+                & p {
+                    color: $bg-left-color;
+                }
+
+            }
+            .servings {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                & i {
+                    color: $bg-left-color;
+                    text-decoration: none;
+                }
+                & p {
+                    color: $bg-left-color;
+                }
+
+                .btn-conts {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: .5rem;
+                    .btn-ico-circle {
+                        border: $bg-left-color solid 2px;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        & i {
+                            color: $bg-left-color;
+                        }
+                    }
+                }
+            }
+            .bookmark-container {
+                & i {
+                    color: $bg-left-color;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .recipe-ingredients {
+            padding: 2rem;
+            .recipe-heading {
+                & p {
+                    font-size: 2rem;
+                }
+            }
+            .recipe-grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 1rem;
+                .image-container {
+                    width: 100%;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    border-radius: .5rem;
+                    overflow: hidden;
+                    & img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            } 
+        }
+    }
+}
