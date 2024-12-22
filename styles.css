@@ -12,6 +12,7 @@ body {
   font-family: "Nunito", serif;
 }
 body .main-container {
+  position: relative;
   max-width: 1200px;
   margin: 5rem auto;
   background: #F9F5F3;
@@ -32,6 +33,7 @@ body {
   font-family: "Nunito", serif;
 }
 body .main-container {
+  position: relative;
   max-width: 1200px;
   margin: 5rem auto;
   background: #F9F5F3;
@@ -92,25 +94,44 @@ nav .add-bookmark-container {
   align-items: center;
 }
 nav .add-bookmark-container .add-container {
+  cursor: pointer;
+  border: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+nav .add-bookmark-container .add-container i {
+  color: #F7B285;
+  font-size: 1.5rem;
 }
 nav .add-bookmark-container .add-container p {
   font-weight: bold;
   color: #F7B285;
 }
+nav .add-bookmark-container .add-container:hover {
+  scale: 1.09;
+}
 nav .add-bookmark-container .bookmark {
+  cursor: pointer;
+  border: none;
+  background: transparent;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
 }
 nav .add-bookmark-container .bookmark i {
   color: #F7B285;
+  font-size: 1.5rem;
 }
 nav .add-bookmark-container .bookmark p {
   font-weight: bold;
   color: #F7B285;
+}
+nav .add-bookmark-container .bookmark:hover {
+  scale: 1.09;
 }
 
 .main-content {
@@ -119,10 +140,10 @@ nav .add-bookmark-container .bookmark p {
 }
 .main-content .left {
   width: 40%;
-  padding: 2rem 1rem;
 }
 .main-content .left .card-item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
@@ -132,15 +153,16 @@ nav .add-bookmark-container .bookmark p {
   text-decoration: none;
 }
 .main-content .left .card-item .card-image-container {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
+  width: 5rem;
 }
 .main-content .left .card-item .card-image-container img {
   width: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-content .left .card-item .card-text {
+  width: 70%;
 }
 .main-content .left .card-item .card-text h3 {
   color: #F7B285;
@@ -168,6 +190,15 @@ nav .add-bookmark-container .bookmark p {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+}
+.main-content .right .main-text .time {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-content .right .main-text .time i {
+  color: #F7B285;
+  font-size: 1.5rem;
 }
 .main-content .right .main-text .time p {
   color: #F7B285;
@@ -210,8 +241,17 @@ nav .add-bookmark-container .bookmark p {
 .main-content .right .recipe-ingredients {
   padding: 2rem;
 }
-.main-content .right .recipe-ingredients .recipe-heading p {
+.main-content .right .recipe-ingredients .recipe-heading .overview {
   font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #F7B285;
+  border-bottom: #F7B285 solid 1px;
+}
+.main-content .right .recipe-ingredients .recipe-heading .product-name {
+  text-transform: capitalize;
+  color: #F7B285;
+  padding: 1rem 0rem;
 }
 .main-content .right .recipe-ingredients .recipe-grid-container {
   display: grid;
@@ -227,4 +267,88 @@ nav .add-bookmark-container .bookmark p {
 .main-content .right .recipe-ingredients .recipe-grid-container .image-container img {
   width: 100%;
   display: block;
+}
+.main-content .right .recipe-ingredients .recipe-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+.main-content .right .recipe-ingredients .recipe-description h3 {
+  font-size: 1.5rem;
+  color: #F7B285;
+}
+.main-content .right .recipe-ingredients .recipe-description p {
+  font-size: 1rem;
+  color: #F7B285;
+}
+
+.form-section {
+  background: linear-gradient(to right, #F9D188, #F7AC85);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  position: absolute;
+  width: 50%;
+  top: 5%;
+  left: 25%;
+  border-radius: 0.5rem;
+  transform: translateY(-500%);
+  transition: all 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+.form-section #upload-form {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.form-section #upload-form input {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: #F9F5F3;
+  font-size: 1rem;
+  color: #504e70;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  margin: 0.5rem 0rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.form-section #upload-form input:hover {
+  transform: translateY(-3px);
+}
+.form-section #upload-form #upload-button {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: #F9F5F3;
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #F7B285;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.form-section #upload-form #upload-button i {
+  color: #F7B285;
+  font-size: 1.5rem;
+}
+.form-section #upload-form #upload-button:hover {
+  transform: translateY(-3px);
+}
+.form-section .image-content-container {
+  width: 40%;
+}
+.form-section .image-content-container img {
+  width: 100%;
+  display: block;
+}
+
+.show-form {
+  transform: translateX(0%);
 }/*# sourceMappingURL=styles.css.map */

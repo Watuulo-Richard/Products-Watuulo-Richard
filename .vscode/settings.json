@@ -1,7 +1,8 @@
 {
     "cSpell.words": [
         "conts",
-        "minbg"
+        "minbg",
+        "toogle"
     ],
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5502
 }

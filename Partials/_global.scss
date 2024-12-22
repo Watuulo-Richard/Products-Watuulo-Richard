@@ -10,6 +10,7 @@ body {
     font-size: 1rem;
     font-family: $font-family;
     .main-container {
+        position: relative;
         max-width: 1200px;
         margin: 5rem auto;
         background: $nav-bar-bg;

@@ -4,10 +4,11 @@
     // padding: 2rem;
     .left {
         width: 40%;
-        padding: 2rem 1rem;
+        // padding: 2rem 1rem;
 
         .card-item {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             gap: 1rem;
             margin-bottom: 1rem;
@@ -16,18 +17,20 @@
             border-radius: .3rem;
             text-decoration: none;
             .card-image-container {
-                width: 60px;
-                height: 60px;
+                width: 5rem;
+            //     height: 80px;
                 // border-radius: 50%;
-                overflow: hidden;
+                // overflow: hidden;
                 & img {
                     width: 100%;
+                    // height: 300px;
                     display: block;
                     // overflow: hidden;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
             .card-text {
+                width: 70%;
                 & h3 {
                     color: $bg-left-color;
                 }
@@ -58,6 +61,14 @@
             justify-content: space-between;
             padding: 2rem;
             .time {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                & i {
+                    color: $bg-left-color;
+                    font-size: 1.5rem;
+                }
                 & p {
                     color: $bg-left-color;
                 }
@@ -105,8 +116,17 @@
         .recipe-ingredients {
             padding: 2rem;
             .recipe-heading {
-                & p {
+                .overview {
                     font-size: 1.5rem;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    color: $bg-left-color;
+                    border-bottom: $bg-left-color solid 1px;
+                }
+                .product-name {
+                    text-transform: capitalize;
+                    color: $bg-left-color;
+                    padding: 1rem 0rem;
                 }
             }
             .recipe-grid-container {
@@ -123,7 +143,22 @@
                         display: block;
                     }
                 }
-            } 
+            }
+            .recipe-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem 0rem;
+                & h3 {
+                    font-size: 1.5rem;
+                    color: $bg-left-color;
+                }
+                & p {
+                    font-size: 1rem;
+                    color: $bg-left-color;
+                }
+            }
         }
     }
 }

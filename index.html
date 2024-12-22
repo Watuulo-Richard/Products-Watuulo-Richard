@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
+    
     <title>Products</title>
 </head>
 <body>
@@ -15,22 +16,22 @@
                     <img src="./Images/logo-09084f39.png" alt="">
                 </a>
             </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search over 1,000,000 recipes...">
+            <form class="search-container">
+                <input type="text" id="search-input" placeholder="Search over 1,000,000 recipes...">
                 <button type="button" class="search-button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <p>SEARCH</p>
                 </button>
-            </div>
+            </form>
             <div class="add-bookmark-container">
-                <div class="add-container">
+                <button type="button" class="add-container">
                     <i class="fa-regular fa-pen-to-square"></i>
                     <p>ADD PRODUCT</p>
-                </div>
-                <div class="bookmark">
+                </button>
+                <button type="button" class="bookmark">
                     <i class="fa-regular fa-bookmark"></i>
                     <p>BOOKMARKS</p>
-                </div>
+                </button>
             </div>
         </nav>
         <section class="main-content">
@@ -148,6 +149,18 @@
                         </div>
                     </div>
                 </div> -->
+            </div>
+        </section>
+        <section class="form-section">
+            <form action="" class="product-upload-form" id="upload-form">
+                <input type="text" id="nameInput" placeholder="Enter Product Name...">
+                <input type="text" id="priceInput" placeholder="Enter Product Price...">
+                <input type="text" id="stockInput" placeholder="Enter Product Stock...">
+                <input type="text" id="imageInput" placeholder="Enter Product Image Link...">
+                <button type="submit" id="upload-button"><i class="fa-solid fa-cloud-arrow-up fa-fade"></i> Upload</button>
+            </form>
+            <div class="image-content-container">
+                <img src="./Images/portrait-young-student-with-globe-education-day.png" alt="">
             </div>
         </section>
     </div>
